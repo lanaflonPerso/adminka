@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <link rel="stylesheet" href="//cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+    <script src="//cdn.rawgit.com/gdi2290/angular-websocket/v1.0.9/angular-websocket.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.5/sockjs.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
+    <script src="view/app.js"></script>
+</head>
+<body  ng-controller="TaskCtrl">
+<div>
+    <div ui-grid="gridOptions" class="grid" ui-grid-pagination style="height:500px"></div>
+</div>
+
+<div style="display: flex;">
+    <div style="float:left;">
+        <textarea cols="120" rows="5" ng-model="links"></textarea>
+    </div>
+    <div style="float:right;background-color: bisque;flex-grow: 100;cursor: pointer;font-size: 10vh" ng-click="send()">
+    </div>
+</div>
+</body>
+</html>
